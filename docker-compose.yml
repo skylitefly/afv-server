@@ -1,0 +1,25 @@
+services:
+  afv-server:
+    image: ghcr.io/skylite-fs/skylite-afv-server
+    restart: always
+    ports:
+      - "5000:5000/tcp"
+      - "50000:50000/udp"
+    environment:
+      # HTTP API used as pilotclient voice api_url.
+      - AFV_HTTP_HOST=0.0.0.0
+      - AFV_HTTP_PORT=5000
+      # UDP voice socket advertised to pilotclient after callsign registration.
+      - AFV_UDP_HOST=0.0.0.0
+      - AFV_UDP_PORT=50000
+      - AFV_PUBLIC_VOICE_HOST=127.0.0.1
+      - AFV_PUBLIC_VOICE_PORT=50000
+      # Use "allow" for local tests, "webhook" for web-backend delegated auth.
+      - AFV_AUTH_MODE=allow
+      - AFV_AUTH_WEBHOOK_URL=http://web-backend:8000/api/auth/pyfsd-auth/
+      - AFV_AUTH_WEBHOOK_SECRET=
+      - AFV_TOKEN_TTL_SECONDS=3600
+      # Optional: mount a JSON alias station list and set this path.
+      - AFV_STATIONS_FILE=
+    # volumes:
+    #   - ./stations.json:/app/stations.json:ro
