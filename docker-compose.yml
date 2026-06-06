@@ -1,6 +1,6 @@
 services:
   afv-server:
-    image: ghcr.io/skylite-fs/skylite-afv-server
+    image: crpi-a20te69e34l8yeun.ap-southeast-1.personal.cr.aliyuncs.com/skylite/skylite-afv-server
     restart: always
     ports:
       - "5000:5000/tcp"
@@ -15,9 +15,9 @@ services:
       - AFV_PUBLIC_VOICE_HOST=127.0.0.1
       - AFV_PUBLIC_VOICE_PORT=50000
       # Use "allow" for local tests, "webhook" for web-backend delegated auth.
-      - AFV_AUTH_MODE=allow
-      - AFV_AUTH_WEBHOOK_URL=http://web-backend:8000/api/auth/pyfsd-auth/
-      - AFV_AUTH_WEBHOOK_SECRET=
+      - AFV_AUTH_MODE=webhook
+      - AFV_AUTH_WEBHOOK_URL=https://api.skylitefly.com/api/auth/pyfsd-auth/
+      - AFV_AUTH_WEBHOOK_SECRET=sk-hmac-skylite-2026-xK9mP3vQ7wR1
       - AFV_TOKEN_TTL_SECONDS=3600
       # Optional: mount a JSON alias station list and set this path.
       - AFV_STATIONS_FILE=
