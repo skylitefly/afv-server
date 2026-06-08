@@ -1,17 +1,6 @@
-# Skylite AFV Server
+# AFV Server
 
-Standalone AFV-compatible server.
-
-It implements:
-
-- `POST /api/v1/auth`
-- `POST /api/v1/users/{username}/callsigns/{callsign}`
-- `DELETE /api/v1/users/{username}/callsigns/{callsign}`
-- `POST /api/v1/users/{username}/callsigns/{callsign}/transceivers`
-- `GET /api/v1/stations/aliased`
-- `GET /api/v1/network/online/callsigns`
-- UDP voice packets for `HeartbeatDto`, `HeartbeatAckDto`, `AudioTxOnTransceiversDto`, and `AudioRxOnTransceiversDto`
-
+AFV-compatible audio server.
 ## Run
 
 ```powershell
@@ -52,9 +41,7 @@ python -m afv_server
 
 ## Configuration
 
-All settings can be supplied through environment variables.
-
-| Variable | Default | Purpose |
+| Environment Variable | Default | Purpose |
 | --- | --- | --- |
 | `AFV_HTTP_HOST` | `0.0.0.0` | HTTP bind host |
 | `AFV_HTTP_PORT` | `5000` | HTTP API port |
