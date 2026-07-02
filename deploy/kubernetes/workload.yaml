@@ -1,0 +1,129 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: skylite-afv-server-config
+  labels:
+    app.kubernetes.io/name: skylite-afv-server
+    app.kubernetes.io/component: voice
+data:
+  AFV_HTTP_HOST: "0.0.0.0"
+  AFV_HTTP_PORT: "5000"
+  AFV_UDP_HOST: "0.0.0.0"
+  AFV_UDP_PORT: "50000"
+  AFV_PUBLIC_VOICE_HOST: "115.159.210.95"
+  AFV_PUBLIC_VOICE_PORT: "50000"
+  AFV_AUTH_MODE: "webhook"
+  AFV_AUTH_WEBHOOK_URL: "http://skylite-backend/api/auth/pyfsd-auth/"
+  AFV_TOKEN_TTL_SECONDS: "3600"
+  AFV_STATIONS_FILE: ""
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: skylite-afv-server
+  labels:
+    app.kubernetes.io/name: skylite-afv-server
+    app.kubernetes.io/component: voice
+spec:
+  replicas: 1
+  revisionHistoryLimit: 3
+  strategy:
+    type: Recreate
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: skylite-afv-server
+      app.kubernetes.io/component: voice
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: skylite-afv-server
+        app.kubernetes.io/component: voice
+    spec:
+      nodeSelector:
+        kubernetes.io/hostname: tencent-shanghai-worker-2
+      imagePullSecrets:
+      - name: aliyun-registry-login-secret
+      containers:
+      - name: afv-server
+        image: crpi-a20te69e34l8yeun.ap-southeast-1.personal.cr.aliyuncs.com/skylite/skylite-afv-server:latest
+        imagePullPolicy: Always
+        ports:
+        - name: http
+          containerPort: 5000
+          protocol: TCP
+        - name: voice-udp
+          containerPort: 50000
+          hostPort: 50000
+          protocol: UDP
+        envFrom:
+        - configMapRef:
+            name: skylite-afv-server-config
+        env:
+        - name: AFV_AUTH_WEBHOOK_SECRET
+          valueFrom:
+            secretKeyRef:
+              name: skylite-backend-secret
+              key: SKYLITE_REQUEST_SIGNING_SECRET
+        resources:
+          requests:
+            cpu: 50m
+            memory: 96Mi
+          limits:
+            memory: 256Mi
+        startupProbe:
+          httpGet:
+            path: /api/v1/stations/aliased
+            port: http
+          failureThreshold: 60
+          periodSeconds: 5
+        readinessProbe:
+          httpGet:
+            path: /api/v1/stations/aliased
+            port: http
+          initialDelaySeconds: 5
+          periodSeconds: 10
+        livenessProbe:
+          httpGet:
+            path: /api/v1/stations/aliased
+            port: http
+          initialDelaySeconds: 30
+          periodSeconds: 20
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: skylite-afv-server
+  labels:
+    app.kubernetes.io/name: skylite-afv-server
+    app.kubernetes.io/component: voice
+spec:
+  selector:
+    app.kubernetes.io/name: skylite-afv-server
+    app.kubernetes.io/component: voice
+  ports:
+  - name: http
+    protocol: TCP
+    port: 80
+    targetPort: http
+  type: ClusterIP
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: skylite-afv-server-ingress
+  labels:
+    app.kubernetes.io/name: skylite-afv-server
+    app.kubernetes.io/component: voice
+spec:
+  ingressClassName: traefik
+  rules:
+  - host: audio.skylitefly.com
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: skylite-afv-server
+            port:
+              number: 80
