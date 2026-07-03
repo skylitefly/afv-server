@@ -60,8 +60,14 @@ class VoiceDatagramProtocol(asyncio.DatagramProtocol):
         if not sender_transceivers:
             return
 
-        for receiver in self.state.clients_by_callsign.values():
-            if receiver.callsign == sender.callsign or receiver.address is None:
+        sender_frequencies = {tx.frequency for tx in sender_transceivers}
+        candidate_callsigns = self.state.callsigns_for_frequencies(sender_frequencies)
+
+        for callsign in candidate_callsigns:
+            if callsign == sender.callsign:
+                continue
+            receiver = self.state.clients_by_callsign.get(callsign)
+            if receiver is None or receiver.address is None:
                 continue
             rx_transceivers = list(_matching_rx_transceivers(sender_transceivers, receiver))
             if not rx_transceivers:

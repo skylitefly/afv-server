@@ -91,6 +91,7 @@ class AfvState:
         self.tokens: dict[str, ApiToken] = {}
         self.clients_by_callsign: dict[str, VoiceClient] = {}
         self.clients_by_channel: dict[str, VoiceClient] = {}
+        self.clients_by_frequency: dict[int, set[str]] = {}
 
     def issue_token(self, token: str, username: str, expires_at: int) -> ApiToken:
         api_token = ApiToken(token=token, username=username, expires_at=expires_at)
@@ -112,14 +113,60 @@ class AfvState:
             self.remove_client(existing.callsign)
         self.clients_by_callsign[client.callsign] = client
         self.clients_by_channel[client.channel_tag] = client
+        self._index_client_frequencies(client)
 
     def remove_client(self, callsign: str) -> None:
         client = self.clients_by_callsign.pop(callsign, None)
         if client is not None:
             self.clients_by_channel.pop(client.channel_tag, None)
+            self._unindex_client_frequencies(client)
 
     def client_for_channel(self, channel_tag: str) -> VoiceClient | None:
         return self.clients_by_channel.get(channel_tag)
+
+    def update_transceivers(self, callsign: str, transceivers: list[Transceiver]) -> None:
+        client = self.clients_by_callsign.get(callsign)
+        if client is None:
+            return
+        self._unindex_client_frequencies(client)
+        client.transceivers = {tx.id: tx for tx in transceivers}
+        self._index_client_frequencies(client)
+
+    def callsigns_for_frequencies(self, frequencies: set[int]) -> set[str]:
+        result: set[str] = set()
+        for freq in frequencies:
+            result |= self.clients_by_frequency.get(freq, set())
+        return result
+
+    def reap_stale(self, stale_threshold_seconds: float) -> tuple[int, int]:
+        now = time.time()
+        expired_tokens = [
+            token for token, api_token in self.tokens.items()
+            if api_token.expires_at <= now
+        ]
+        for token in expired_tokens:
+            del self.tokens[token]
+
+        stale_callsigns = [
+            callsign for callsign, client in self.clients_by_callsign.items()
+            if client.last_seen_at < now - stale_threshold_seconds
+        ]
+        for callsign in stale_callsigns:
+            self.remove_client(callsign)
+
+        return len(expired_tokens), len(stale_callsigns)
+
+    def _index_client_frequencies(self, client: VoiceClient) -> None:
+        for tx in client.transceivers.values():
+            self.clients_by_frequency.setdefault(tx.frequency, set()).add(client.callsign)
+
+    def _unindex_client_frequencies(self, client: VoiceClient) -> None:
+        for tx in client.transceivers.values():
+            freq_set = self.clients_by_frequency.get(tx.frequency)
+            if freq_set is not None:
+                freq_set.discard(client.callsign)
+                if not freq_set:
+                    del self.clients_by_frequency[tx.frequency]
 
 
 def frequency_matches(left: int, right: int) -> bool:

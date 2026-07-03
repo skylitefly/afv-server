@@ -78,11 +78,9 @@ async def handle_add_callsign(request: web.Request) -> web.Response:
     api_token = _require_token(request)
     username = request.match_info["username"]
     callsign = request.match_info["callsign"]
-    if api_token.username != username:
-        username = api_token.username
 
     state = request.app[STATE_KEY]
-    client = VoiceClient.create(username=username, callsign=callsign)
+    client = VoiceClient.create(username=api_token.username, callsign=callsign)
     state.add_client(client)
     config = request.app[CONFIG_KEY]
     return web.json_response(
@@ -118,8 +116,11 @@ async def handle_update_transceivers(request: web.Request) -> web.Response:
     client = state.clients_by_callsign.get(callsign)
     if client is None:
         return web.json_response({"error": "Unknown callsign"}, status=404)
-    transceivers = [Transceiver.from_json(item) for item in body if isinstance(item, dict)]
-    client.transceivers = {transceiver.id: transceiver for transceiver in transceivers}
+    for item in body:
+        if not isinstance(item, dict):
+            return web.json_response({"error": "Each transceiver must be a JSON object"}, status=400)
+    transceivers = [Transceiver.from_json(item) for item in body]
+    state.update_transceivers(callsign, transceivers)
     return web.Response(status=204)
 
 

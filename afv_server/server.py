@@ -17,6 +17,20 @@ from .voice import VoiceDatagramProtocol
 LOGGER = logging.getLogger(__name__)
 
 
+async def _reaper_loop(state: AfvState, config: Config) -> None:
+    """Periodically reap expired tokens and stale voice clients."""
+
+    while True:
+        await asyncio.sleep(config.reaper_interval_seconds)
+        expired_tokens, stale_clients = state.reap_stale(config.client_stale_seconds)
+        if expired_tokens or stale_clients:
+            LOGGER.debug(
+                "Reaped %d expired tokens, %d stale clients",
+                expired_tokens,
+                stale_clients,
+            )
+
+
 async def run(config: Config) -> None:
     """Run HTTP and UDP AFV services until cancelled."""
 
@@ -38,9 +52,15 @@ async def run(config: Config) -> None:
     LOGGER.info("AFV HTTP listening on %s:%s", config.http_host, config.http_port)
     LOGGER.info("AFV UDP listening on %s:%s", config.udp_host, config.udp_port)
     LOGGER.info("AFV voice address advertised as %s", config.voice_address)
+
+    reaper_task = asyncio.create_task(_reaper_loop(state, config))
+
     try:
         await asyncio.Event().wait()
     finally:
+        reaper_task.cancel()
+        with contextlib.suppress(asyncio.CancelledError):
+            await reaper_task
         transport.close()
         await runner.cleanup()
         await authenticator.close()

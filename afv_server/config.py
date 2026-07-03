@@ -59,6 +59,8 @@ class Config:
     auth_webhook_url: str = ""
     auth_webhook_secret: str = ""
     token_ttl_seconds: int = 3600
+    reaper_interval_seconds: int = 30
+    client_stale_seconds: int = 60
     stations: list[StationAlias] = field(default_factory=list)
 
     @property
@@ -87,5 +89,7 @@ class Config:
             auth_webhook_url=os.getenv("AFV_AUTH_WEBHOOK_URL", ""),
             auth_webhook_secret=os.getenv("AFV_AUTH_WEBHOOK_SECRET", ""),
             token_ttl_seconds=_int_env("AFV_TOKEN_TTL_SECONDS", 3600),
+            reaper_interval_seconds=_int_env("AFV_REAPER_INTERVAL_SECONDS", 30),
+            client_stale_seconds=_int_env("AFV_CLIENT_STALE_SECONDS", 60),
             stations=stations,
         )
