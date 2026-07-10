@@ -1,0 +1,91 @@
+# Cursor AI context exclusions (https://cursor.com/docs/context/ignore-files)
+
+# Secrets and credentials
+.env
+.env.*
+!.env.example
+**/.env
+**/.env.*
+**/local_settings.py
+**/credentials.json
+**/secrets.json
+*.key
+*.pem
+*.p12
+*.pfx
+*.jks
+*.keystore
+id_rsa
+id_rsa.pub
+.sentryclirc
+.pypirc
+.npmrc
+auth.json
+.beta-flags-private.pem
+
+# Dependencies
+node_modules/
+**/node_modules/
+vendor/
+.venv/
+venv/
+env/
+__pycache__/
+*.egg-info/
+.pdm-python/
+.pdm-build/
+**/vcpkg/
+**/vcpkg_installed/
+third_party/externals/
+backend/extern/
+build_conan/
+
+# Build output
+dist/
+build/
+target/
+out/
+release/
+.next/
+.nuxt/
+cmake-build-*/
+/build*/
+*.o
+*.obj
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Large data / binaries
+*.db3
+*.mmdb
+*.pickle
+*.7z
+*.tar.gz
+*.zip
+*.qm
+
+# Logs and caches
+*.log
+.ruff_cache/
+.mypy_cache/
+.pytest_cache/
+.cache/
+.vite/
+.eslintcache
+.turbo/
+
+# IDE / OS
+.idea/
+.vs/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Local runtime / generated data
+whazzup.json
+pyfsd.db
+pyfsd.toml
+pyfsd_client.toml
+db.sqlite3
