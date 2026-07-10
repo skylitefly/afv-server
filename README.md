@@ -1,6 +1,9 @@
 # AFV Server
 
 AFV-compatible audio server.
+
+> **Note:** This project is no longer maintained. We are working on a Rust implementation.
+
 ## Run
 
 ```powershell
@@ -53,4 +56,6 @@ python -m afv_server
 | `AFV_AUTH_WEBHOOK_URL` | empty | web-backend auth endpoint |
 | `AFV_AUTH_WEBHOOK_SECRET` | empty | optional HMAC request signing secret |
 | `AFV_TOKEN_TTL_SECONDS` | `3600` | AFV API JWT lifetime |
-| `AFV_STATIONS_FILE` | empty | JSON list for `/api/v1/stations/aliased` |
+| `AFV_ALIASED_FILE` | empty | JSON list for `/api/v1/stations/aliased` (`aliased.json`) |
+
+
