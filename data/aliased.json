@@ -1,0 +1,620 @@
+[
+  {
+    "id": "4581bb44-2b30-48f6-84dd-a64255747895",
+    "name": "CZQO_CTR",
+    "frequency": 8864000,
+    "frequencyAlias": 131700000
+  },
+  {
+    "id": "97bf85c0-5ebe-4b02-ae96-90fee2f2e52c",
+    "name": "ENOB_CTR",
+    "frequency": 8840000,
+    "frequencyAlias": 123175000
+  },
+  {
+    "id": "a0f3dfd4-8883-4192-8f79-a7c55b0d41cd",
+    "name": "NY_CL_FSS",
+    "frequency": 5550000,
+    "frequencyAlias": 130000000
+  },
+  {
+    "id": "740bab74-4442-475f-bfa7-84997dee1994",
+    "name": "EGGX_D_CTR",
+    "frequency": 10021000,
+    "frequencyAlias": 131750000
+  },
+  {
+    "id": "9d14cb31-5f92-4d35-92fa-092ae25ec41f",
+    "name": "CZQO_F_CTR",
+    "frequency": 13291000,
+    "frequencyAlias": 131975000
+  },
+  {
+    "id": "4c057788-5cce-4feb-bbfd-4c9516127cda",
+    "name": "EGGX_C_CTR",
+    "frequency": 8879000,
+    "frequencyAlias": 131650000
+  },
+  {
+    "id": "669d57ee-0037-4103-a7cc-cd3ede65fb3d",
+    "name": "EGGX_F_CTR",
+    "frequency": 6622000,
+    "frequencyAlias": 131850000
+  },
+  {
+    "id": "e287f110-bc94-4781-97c2-8dcab46b11b2",
+    "name": "CZQO_D_CTR",
+    "frequency": 4675000,
+    "frequencyAlias": 131875000
+  },
+  {
+    "id": "d5931e66-39b2-466c-8938-071e3a5c2514",
+    "name": "BICC_2_FSS",
+    "frequency": 2971000,
+    "frequencyAlias": 126550000
+  },
+  {
+    "id": "dcc0a07f-3d78-4260-88f4-58df8dd4af95",
+    "name": "TTZO_FSS",
+    "frequency": 6628000,
+    "frequencyAlias": 126500000
+  },
+  {
+    "id": "0e318eec-7b2e-4361-9bd2-ebc22b756c9c",
+    "name": "NZZO_FSS",
+    "frequency": 8867000,
+    "frequencyAlias": 129000000
+  },
+  {
+    "id": "1b66f652-5ef8-4d70-b2dd-16958f95fe5c",
+    "name": "NZCM_FSS",
+    "frequency": 9032000,
+    "frequencyAlias": 128700000
+  },
+  {
+    "id": "4ead216d-786c-481f-ae23-452133600e96",
+    "name": "NTTT_FSS",
+    "frequency": 9116000,
+    "frequencyAlias": 125500000
+  },
+  {
+    "id": "166c3c4e-db1c-41cc-a186-97a0b5266018",
+    "name": "NZZO-E_FSS",
+    "frequency": 5643000,
+    "frequencyAlias": 131500000
+  },
+  {
+    "id": "d864ac18-9ba7-4087-bac8-ce5a8ead9c1e",
+    "name": "BN-TSN_FSS",
+    "frequency": 17904000,
+    "frequencyAlias": 124650000
+  },
+  {
+    "id": "50ee9239-3caa-4e27-993a-62c1fdd5b976",
+    "name": "VOMX_CTR",
+    "frequency": 2872000,
+    "frequencyAlias": 126950000
+  },
+  {
+    "id": "a0dd5fae-4b72-482b-9fcb-47c2c8c2036c",
+    "name": "VABF_OC_CTR",
+    "frequency": 10084000,
+    "frequencyAlias": 132600000
+  },
+  {
+    "id": "a852a283-18da-4b7c-ad01-73e5f9ed6a37",
+    "name": "VECF_OC_CTR",
+    "frequency": 5580000,
+    "frequencyAlias": 128300000
+  },
+  {
+    "id": "5f0ea927-d8bc-44b3-a8a3-6069795c90aa",
+    "name": "LPPO_P1_CTR",
+    "frequency": 5598000,
+    "frequencyAlias": 124850000
+  },
+  {
+    "id": "4bc44a7b-d600-4996-b296-70f556363d83",
+    "name": "FAJO_1_FSS",
+    "frequency": 13294000,
+    "frequencyAlias": 120650000
+  },
+  {
+    "id": "b6189268-6159-4e33-8fd3-5465a35ae27d",
+    "name": "SBAO_SE_FSS",
+    "frequency": 5565000,
+    "frequencyAlias": 133325000
+  },
+  {
+    "id": "5f884c83-2cac-4f7a-a967-e2d794259890",
+    "name": "BICC_3_FSS",
+    "frequency": 12306000,
+    "frequencyAlias": 129620000
+  },
+  {
+    "id": "7ba4aff0-e6b8-4ddd-8615-5154c7cc4361",
+    "name": "ML-INE_FSS",
+    "frequency": 17961000,
+    "frequencyAlias": 123650000
+  },
+  {
+    "id": "fd0b3d0c-a6c2-4b6f-90c6-905701178426",
+    "name": "BN-COL_FSS",
+    "frequency": 6556000,
+    "frequencyAlias": 133150000
+  },
+  {
+    "id": "847556ad-93ec-4e00-b129-0bf2868835f6",
+    "name": "BN-FLD_FSS",
+    "frequency": 13318000,
+    "frequencyAlias": 132850000
+  },
+  {
+    "id": "baae4167-f1f8-42ec-beda-f9733c7aff3f",
+    "name": "BICC_1_FSS",
+    "frequency": 11279000,
+    "frequencyAlias": 127850000
+  },
+  {
+    "id": "f7e92a46-7f27-4b15-a302-55a3be27c0cd",
+    "name": "CZQO_C_CTR",
+    "frequency": 2872000,
+    "frequencyAlias": 131775000
+  },
+  {
+    "id": "2c204d53-02f4-429a-9122-ecee56c819f3",
+    "name": "CZQO_A_CTR",
+    "frequency": 3016000,
+    "frequencyAlias": 131575000
+  },
+  {
+    "id": "7de1a926-2354-4f60-90c3-8b497f79bcae",
+    "name": "EGGX_CTR",
+    "frequency": 6547000,
+    "frequencyAlias": 131800000
+  },
+  {
+    "id": "d4c91469-2666-40ad-bcc3-85e121dd7134",
+    "name": "CZQO_B_CTR",
+    "frequency": 5616000,
+    "frequencyAlias": 131675000
+  },
+  {
+    "id": "abf9893a-d160-4991-949e-139c35cfdfff",
+    "name": "LPPO_FSS",
+    "frequency": 13306000,
+    "frequencyAlias": 133060000
+  },
+  {
+    "id": "5c850a4a-b882-46cf-9670-c77e3225f423",
+    "name": "SAM_S_FSS",
+    "frequency": 3275000,
+    "frequencyAlias": 134700000
+  },
+  {
+    "id": "95de8b3d-bff1-42b5-a1c7-ff0b7dd6081c",
+    "name": "SAM_W_FSS",
+    "frequency": 6850000,
+    "frequencyAlias": 134050000
+  },
+  {
+    "id": "4e86b4aa-fa44-49b2-8f18-cda9514a71c1",
+    "name": "SAEF_FSS",
+    "frequency": 1009600,
+    "frequencyAlias": 133950000
+  },
+  {
+    "id": "daaf410a-20ed-4db7-ba29-f1ab7cfdc2d2",
+    "name": "FAJO_FSS",
+    "frequency": 17955000,
+    "frequencyAlias": 120850000
+  },
+  {
+    "id": "e2cb49d0-cdbf-4a3a-adaa-6e9f1dda8838",
+    "name": "GOOC_A_FSS",
+    "frequency": null,
+    "frequencyAlias": 123500000
+  },
+  {
+    "id": "7bfa03b1-f53e-4c17-ae3d-94307d1aad2d",
+    "name": "SOOO_1_CTR",
+    "frequency": 8855000,
+    "frequencyAlias": 128450000
+  },
+  {
+    "id": "def4908e-4163-4faa-8b7d-c1228bae39a1",
+    "name": "SOOO_2_CTR",
+    "frequency": 5526000,
+    "frequencyAlias": 127200000
+  },
+  {
+    "id": "87d17408-b802-4930-9d52-9cec151f61b2",
+    "name": "GOOC_B_FSS",
+    "frequency": null,
+    "frequencyAlias": 124500000
+  },
+  {
+    "id": "685e970a-bc70-4fc3-be9c-e04d420b6ecf",
+    "name": "FAJO_3_FSS",
+    "frequency": 6559000,
+    "frequencyAlias": 120900000
+  },
+  {
+    "id": "97fba1ac-2a0f-4b91-810d-005d9e52589f",
+    "name": "SCIZ_FSS",
+    "frequency": 6649000,
+    "frequencyAlias": 124900000
+  },
+  {
+    "id": "3e2ba738-f9a8-4f5b-9ae1-0cfadf8aefc9",
+    "name": "SBAO_NE_FSS",
+    "frequency": 17955000,
+    "frequencyAlias": 133075000
+  },
+  {
+    "id": "5a517dc4-2041-40a7-9023-db619821a5f2",
+    "name": "HCSM_I_CTR",
+    "frequency": 3467000,
+    "frequencyAlias": 132525000
+  },
+  {
+    "id": "b5806bcc-6070-40b6-9c7b-971b5a25e8a9",
+    "name": "OKAC_F_CTR",
+    "frequency": 5658000,
+    "frequencyAlias": 132870000
+  },
+  {
+    "id": "d6d38b3f-6701-417d-b5a4-5f161aa8d001",
+    "name": "ZAN_64_FSS",
+    "frequency": 11342000,
+    "frequencyAlias": 134400000
+  },
+  {
+    "id": "183e5bb5-7ed1-4457-961b-01033b3c58d0",
+    "name": "ZAN_10_FSS",
+    "frequency": 17925000,
+    "frequencyAlias": 126400000
+  },
+  {
+    "id": "e33955e8-e8c5-4d31-bb6b-cf13cbcd5f7c",
+    "name": "NFFF_FSS",
+    "frequency": 8846000,
+    "frequencyAlias": 123600000
+  },
+  {
+    "id": "a54eb020-4d64-46e0-8d0f-3773c544c038",
+    "name": "LPPO_P3_CTR",
+    "frequency": 1320250,
+    "frequencyAlias": 132025000
+  },
+  {
+    "id": "0f98f3b4-a1a9-47c5-a188-36edadc3f739",
+    "name": "TTZO_B_FSS",
+    "frequency": 5526000,
+    "frequencyAlias": 133100000
+  },
+  {
+    "id": "5260febd-e4ec-4dba-8abf-b5daa6aa7e0e",
+    "name": "NY_KH_FSS",
+    "frequency": 8918000,
+    "frequencyAlias": 130250000
+  },
+  {
+    "id": "a30dc2d9-5b47-4500-942a-71176f39948f",
+    "name": "NY_GL_FSS",
+    "frequency": 13354000,
+    "frequencyAlias": 130500000
+  },
+  {
+    "id": "8067a969-2dc0-4780-8163-c953975a3328",
+    "name": "NY_ML_FSS",
+    "frequency": 17946000,
+    "frequencyAlias": 130600000
+  },
+  {
+    "id": "6e642b76-2e79-4cc5-8e83-e62e770ce6ab",
+    "name": "NY_XH_FSS",
+    "frequency": 11330000,
+    "frequencyAlias": 130350000
+  },
+  {
+    "id": "27c1ea01-04cf-4cc3-8933-1c0ca1d644bc",
+    "name": "NY_XL_FSS",
+    "frequency": 6586000,
+    "frequencyAlias": 130300000
+  },
+  {
+    "id": "32630998-2de6-40c3-80b2-09d31b9277be",
+    "name": "NY_AH_FSS",
+    "frequency": 17952000,
+    "frequencyAlias": 130450000
+  },
+  {
+    "id": "feb1d4ed-ea77-4c40-9116-0a02d5191f94",
+    "name": "NY_AL_FSS",
+    "frequency": 11309000,
+    "frequencyAlias": 130400000
+  },
+  {
+    "id": "a8cdfaa8-c830-4ccd-b7e0-c54569e0af51",
+    "name": "NY_BL_FSS",
+    "frequency": 2887000,
+    "frequencyAlias": 130100000
+  },
+  {
+    "id": "d85f5c58-fcf3-4fc4-98b8-d872f91d5dbd",
+    "name": "NY_BH_FSS",
+    "frequency": 8846000,
+    "frequencyAlias": 130150000
+  },
+  {
+    "id": "5445ab22-6a7e-40b5-bd01-ba4a17ea50cf",
+    "name": "NY_CH_FSS",
+    "frequency": 6577000,
+    "frequencyAlias": 130050000
+  },
+  {
+    "id": "41f55664-25b0-4265-bbc9-c86f305ebbd3",
+    "name": "NY_GH_FSS",
+    "frequency": 21964000,
+    "frequencyAlias": 130550000
+  },
+  {
+    "id": "ae18dbb6-d777-49d2-b7a8-75b7b1104b52",
+    "name": "NY_MH_FSS",
+    "frequency": 21925000,
+    "frequencyAlias": 130650000
+  },
+  {
+    "id": "a43e5cf7-c629-499a-b278-186cc15ab8b8",
+    "name": "EGGX_A_CTR",
+    "frequency": 8906000,
+    "frequencyAlias": 131450000
+  },
+  {
+    "id": "38e66fa5-3372-4616-8a1b-3740fcd4a438",
+    "name": "EGGX_B_CTR",
+    "frequency": 2899000,
+    "frequencyAlias": 131550000
+  },
+  {
+    "id": "cdd059c6-342e-4ba7-9b05-b78d0a51466e",
+    "name": "WMFC_O_CTR",
+    "frequency": 1337000,
+    "frequencyAlias": 133400000
+  },
+  {
+    "id": "3f9740ea-560d-4165-b211-2616699471e6",
+    "name": "GOOC_FSS",
+    "frequency": null,
+    "frequencyAlias": 122500000
+  },
+  {
+    "id": "2aeebabb-bcdb-4785-a1cc-f0a86d27207a",
+    "name": "NAT_FSS",
+    "frequency": 5649000,
+    "frequencyAlias": 131900000
+  },
+  {
+    "id": "144327aa-8338-48fc-927f-6feac2bd55f6",
+    "name": "FIMM_FSS",
+    "frequency": 13306000,
+    "frequencyAlias": 133050000
+  },
+  {
+    "id": "794a3b14-371f-48db-b86b-dfe0e63e9446",
+    "name": "ML-INS_FSS",
+    "frequency": 3476000,
+    "frequencyAlias": 123200000
+  },
+  {
+    "id": "1c7b111f-b978-448d-a698-d1fa4810986f",
+    "name": "DGAO_CTR",
+    "frequency": 6535000,
+    "frequencyAlias": 136650000
+  },
+  {
+    "id": "319503ac-881d-4fae-9d67-69a68e533dec",
+    "name": "FLTWTCH",
+    "frequency": 6565000,
+    "frequencyAlias": 126650000
+  },
+  {
+    "id": "83cfc364-3d28-4f2a-a7a4-138ab3f40f10",
+    "name": "ULWU_TWR",
+    "frequency": null,
+    "frequencyAlias": 133000000
+  },
+  {
+    "id": "a10bbc82-51a8-4754-b4bc-8d1998bb6d05",
+    "name": "ULLL_MHF_CTR",
+    "frequency": 11390000,
+    "frequencyAlias": 133900000
+  },
+  {
+    "id": "3bd22bb5-eb37-4161-8e48-82100f9be8f2",
+    "name": "MMFO_FSS",
+    "frequency": 5574000,
+    "frequencyAlias": 130975000
+  },
+  {
+    "id": "11410285-0be0-4728-8c55-d380469eada7",
+    "name": "ZAK_FSS",
+    "frequency": 11282000,
+    "frequencyAlias": 129400000
+  },
+  {
+    "id": "21d72f8b-1ad3-4247-a821-bdcfe8c6f680",
+    "name": "ZAK_E1_FSS",
+    "frequency": 8843000,
+    "frequencyAlias": 130800000
+  },
+  {
+    "id": "6a0f4e7c-a94f-42b6-987c-475032df6b17",
+    "name": "ZAK_W1_FSS",
+    "frequency": 8870000,
+    "frequencyAlias": 130700000
+  },
+  {
+    "id": "1051782f-a11d-47b0-a641-1a41bd90b77b",
+    "name": "ZAK_E_FSS",
+    "frequency": 5547000,
+    "frequencyAlias": 131175000
+  },
+  {
+    "id": "908deb33-a967-474b-ae56-185fb52eb096",
+    "name": "ZAK_W_FSS",
+    "frequency": 6532000,
+    "frequencyAlias": 131950000
+  },
+  {
+    "id": "e15d5528-5b67-4b59-b58a-9f09c4446736",
+    "name": "ZAK_W2_FSS",
+    "frequency": 5643000,
+    "frequencyAlias": 128900000
+  },
+  {
+    "id": "29997e68-b2ef-4245-8c80-ec4880afe647",
+    "name": "UHHH_HF_CTR",
+    "frequency": 6589000,
+    "frequencyAlias": 133710000
+  },
+  {
+    "id": "9bae85a9-14c9-4e15-b1f7-48b38a612db7",
+    "name": "SBAO_SW_FSS",
+    "frequency": 8855000,
+    "frequencyAlias": 133450000
+  },
+  {
+    "id": "4aa4f820-0622-4b0a-88aa-d916b3ecc1af",
+    "name": "SBAO_N_FSS",
+    "frequency": 13315000,
+    "frequencyAlias": 133025000
+  },
+  {
+    "id": "fc8ebef5-1ead-4c34-8e77-944248ea7025",
+    "name": "SBAO_FSS",
+    "frequency": 4669000,
+    "frequencyAlias": 133500000
+  },
+  {
+    "id": "d99e5955-71ef-416e-82c9-59a9e78a8bc2",
+    "name": "SBAO_S_FSS",
+    "frequency": 10096000,
+    "frequencyAlias": 133125000
+  },
+  {
+    "id": "bc3126c2-6b30-4bae-9743-dffabf552387",
+    "name": "SBAO_NW_FSS",
+    "frequency": 8861000,
+    "frequencyAlias": 133275000
+  },
+  {
+    "id": "b3a5cc9c-875c-4c5e-93af-9a1fb7f63a7b",
+    "name": "LPPO_P2_CTR",
+    "frequency": 8825000,
+    "frequencyAlias": 132000000
+  },
+  {
+    "id": "1c871e2f-1316-47fb-b023-3e46e9516ccc",
+    "name": "NY_KL_FSS",
+    "frequency": 5520000,
+    "frequencyAlias": 130200000
+  },
+  {
+    "id": "1e40a65b-c859-45d7-b946-b71afa1786da",
+    "name": "CZQO_G_CTR",
+    "frequency": 8891000,
+    "frequencyAlias": 131475000
+  },
+  {
+    "id": "cfb2d5d2-1233-49c7-a6c5-3c6d11ee24aa",
+    "name": "GCCO_FSS",
+    "frequency": 8861000,
+    "frequencyAlias": 136375000
+  },
+  {
+    "id": "8ebe6771-61e7-4342-a608-c7b219c2ae59",
+    "name": "ML-IND_FSS",
+    "frequency": 5634000,
+    "frequencyAlias": 129250000
+  },
+  {
+    "id": "fbad94d4-3a93-463d-b138-9cbddff5c38f",
+    "name": "NAT_R_FSS",
+    "frequency": 4426000,
+    "frequencyAlias": 131955000
+  },
+  {
+    "id": "6b9047ce-0e7a-40bf-8912-26ba5e008f20",
+    "name": "EGGX_G_CTR",
+    "frequency": 3485000,
+    "frequencyAlias": 131880000
+  },
+  {
+    "id": "fc71a052-d6c0-42ad-9265-535ad6ea5a9e",
+    "name": "VOMF_OC_CTR",
+    "frequency": 5670000,
+    "frequencyAlias": 126150000
+  },
+  {
+    "id": "5201559b-8f19-40d8-8e31-8600997ee153",
+    "name": "RJJJ_FSS",
+    "frequency": 2932000,
+    "frequencyAlias": 131725000
+  },
+  {
+    "id": "956d19d7-a285-4311-b6a6-00f636ef426c",
+    "name": "SCCZ_FSS",
+    "frequency": 8861000,
+    "frequencyAlias": 128100000
+  },
+  {
+    "id": "c1c307ba-4973-4bcb-ad43-8b863e8c34c0",
+    "name": "SUEO_FSS",
+    "frequency": 5610000,
+    "frequencyAlias": 126300000
+  },
+  {
+    "id": "5ec577e5-c02e-4103-a681-6304d105e9af",
+    "name": "VCCF_OC_CTR",
+    "frequency": 5670000,
+    "frequencyAlias": 126000000
+  },
+  {
+    "id": "2f4c9ef4-e4fb-43b9-a183-868b99a8044a",
+    "name": "VVHM_RDO",
+    "frequency": 8942000,
+    "frequencyAlias": 133750000
+  },
+  {
+    "id": "594c6ad6-54d3-4059-a438-24b6dec3eb79",
+    "name": "LPPO_P4_CTR",
+    "frequency": 1311300,
+    "frequencyAlias": 131130000
+  },
+  {
+    "id": "613d45b1-7a41-4f5c-8af0-1196bc9c9f9c",
+    "name": "GVAC_CTR",
+    "frequency": 6767000,
+    "frequencyAlias": 135335000
+  },
+  {
+    "id": "f2cf9879-cf07-43ec-a6db-d9ddd38bf1d6",
+    "name": "RJJJ_1_FSS",
+    "frequency": 17946000,
+    "frequencyAlias": 130425000
+  },
+  {
+    "id": "52879873-e912-459c-8c50-5716955112cb",
+    "name": "RJJJ_2_FSS",
+    "frequency": 11330000,
+    "frequencyAlias": 131525000
+  },
+  {
+    "id": "39b9d1a6-719d-49f0-81d6-e6f7e87f2d2f",
+    "name": "RJJJ_3_FSS",
+    "frequency": 8951000,
+    "frequencyAlias": 130025000
+  }
+]

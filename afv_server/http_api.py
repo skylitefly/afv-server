@@ -134,7 +134,7 @@ async def handle_aliased_stations(request: web.Request) -> web.Response:
                 "frequency": station.frequency,
                 "frequencyAlias": station.frequencyAlias,
             }
-            for station in config.stations
+            for station in config.aliased_stations
         ]
     )
 

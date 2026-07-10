@@ -15,7 +15,7 @@ async def test_auth_and_callsign_lifecycle() -> None:
         public_voice_host="203.0.113.10",
         public_voice_port=50123,
         token_ttl_seconds=600,
-        stations=[
+        aliased_stations=[
             StationAlias(
                 id="11111111-1111-1111-1111-111111111111",
                 name="SKY_CTR",

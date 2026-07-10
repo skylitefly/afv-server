@@ -33,6 +33,7 @@ htmlcov/
 .env.*
 *.local
 stations.local.json
+data/stations.db
 
 # Runtime logs
 *.log
